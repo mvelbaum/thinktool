@@ -5,13 +5,13 @@ windows:
     panes:
       - shell_command:
           - cd src/web
-          - npm run dev
+          - yarn run dev
       - shell_command:
           - cd src/client
-          - npm run watch
+          - yarn run watch
       - shell_command:
           - cd src/client
-          - npm run test-watch
+          - yarn run test-watch
   - layout: even-vertical
     panes:
       - shell_command:
@@ -19,12 +19,12 @@ windows:
           - node dist/server.js
       - shell_command:
           - cd src/server
-          - npx jest --watch-all
+          - yarn jest --watch-all
       - shell_command:
           - cd src/server
-          - npm run watch
+          - yarn run watch
   - layout: even-vertical
     panes:
       - shell_command:
           - cd src/search
-          - npm run watch
+          - yarn run watch
