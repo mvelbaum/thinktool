@@ -1,5 +1,5 @@
-@use "../style/components";
-@use "../style/base";
+@use "components";
+@use "base";
 
 .toolbar button.tutorial-relevant {
   text-shadow: 0 0 8px hsl(45, 100%, 50%);

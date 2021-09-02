@@ -31,8 +31,6 @@ Source code:
 | `/src/server/` | Code for dynamic Node.js server.                   |
 | `/src/web/`    | Code specific to web client.                       |
 | `/src/desktop` | Code specific to desktop client.                   |
-| `/src/markup/` | Source for HTML markup.                            |
-| `/src/style/`  | Source for CSS stylesheets.                        |
 | `/src/static/` | Other static resources.                            |
 
 The generated output goes in the `/dist/` directory. Each subdirectory is intended to be deployed differently:

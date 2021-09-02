@@ -1,0 +1,64 @@
+@use "sass:color";
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,500i,800,800i&display=swap&subset=cyrillic,latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
+$ui-tiny-font-size: 0.9 * 0.9rem;
+$ui-small-font-size: 0.9rem;
+
+$other-parents-small-font-size: $ui-tiny-font-size;
+
+$quick-transition-time: 150ms;
+$slow-transition-time: 300ms;
+
+$top-bar-ui-color: #00000060;
+
+$overlay-box-shadow-color: #00000020;
+$overlay-box-shadow-radius: 12px;
+$overlay-border: 1px solid #00000030;
+$overlay-border-radius: 12px;
+
+$toolbar-border: 1px solid #00000020;
+
+@mixin ui-font {
+  font-family: "Recursive", monospace;
+  font-variation-settings: "MONO" 0.8, "CASL" 0;
+  letter-spacing: 0;
+}
+
+@mixin heading-font {
+  font-family: "Recursive", sans-serif;
+  font-weight: 800;
+  font-variation-settings: "MONO" 0, "CASL" 0.8;
+  letter-spacing: 0;
+}
+
+@mixin subtle-button($color: #000000) {
+  @include ui-font;
+
+  border: none;
+  outline: none;
+
+  padding: 3px 6px;
+  margin: 0 -6px;
+  border-radius: 3px;
+
+  background-color: transparent;
+
+  transition: all $quick-transition-time;
+
+  &:hover:not(:disabled) {
+    background-color: color.scale($color, $alpha: -90%);
+  }
+
+  &:active:not(:disabled) {
+    background-color: color.scale($color, $alpha: -83%);
+  }
+}
+
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
